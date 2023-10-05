@@ -1,0 +1,13 @@
+--- 
+ - hosts: ubuntuserver
+   become: yes
+   tasks: 
+     - name: install tree on ubuntu node
+       apt:
+         name: "{{first}}"
+         state: present
+
+     - name: instal webserver
+       apt: 
+        name: "{{second}}"
+        state: present     
