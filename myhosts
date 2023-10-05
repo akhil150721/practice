@@ -2,5 +2,5 @@
 172.31.39.125
 
 [ubuntuserver: vars]
-first: tree
-second: apache2 
+first= tree
+second= apache2 
