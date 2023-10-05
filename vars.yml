@@ -6,8 +6,10 @@
        apt:
          name: "{{first}}"
          state: present
+       when: ansible_os_family== "Debian"      
 
      - name: instal webserver
        apt: 
         name: "{{second}}"
-        state: present     
+        state: present 
+       when: ansible_os_family== "Debian"     
