@@ -2,10 +2,9 @@
  - hosts: ubuntuserver
    become: yes
    tasks: 
-     - name: install tree on ubuntu node
-       command : 
-           cmd: hostname -f
-           register: trail
+     - name: execute command
+       command : hostname -f
+       register: trail
          
      - name : view my pack
        debug: 
