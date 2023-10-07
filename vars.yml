@@ -6,10 +6,16 @@
        apt:
          name: "{{first}}"
          state: present
-       when: ansible_os_family== "Debian"   
+         register: trail
+       when: ansible_os_family== "Debian" 
+         
 
      - name: instal webserver
        apt: 
         name: "{{second}}"
         state: present 
-       when: ansible_os_family== "Debian"     
+       when: ansible_os_family== "Debian" 
+
+     - name : view my pack
+       debug: 
+         msg : {{trail}}      
