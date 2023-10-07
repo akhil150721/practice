@@ -3,19 +3,10 @@
    become: yes
    tasks: 
      - name: install tree on ubuntu node
-       apt:
-         name: "{{first}}"
-         state: present
-         register: trail
-       when: ansible_os_family== "Debian" 
+       command : 
+           cmd: hostname -f
+           register: trail
          
-
-     - name: instal webserver
-       apt: 
-        name: "{{second}}"
-        state: present 
-       when: ansible_os_family== "Debian" 
-
      - name : view my pack
        debug: 
          msg : "{{trail}}"      
