@@ -18,4 +18,4 @@
 
      - name : view my pack
        debug: 
-         msg : {{trail}}      
+         msg : "{{trail}}"      
