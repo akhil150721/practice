@@ -1,0 +1,13 @@
+--- 
+- host: all
+  become: yes
+  tasks: 
+     - name: create a folder 
+       file:
+         path: /home/akhil/test
+         state: touch
+
+     - name: install apache 
+       apt: 
+        name: apache2
+        state: present     
