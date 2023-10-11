@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.21.148
+- hosts: all
   become: yes
   roles: 
   - {role: tomrole}
