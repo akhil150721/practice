@@ -1,9 +1,11 @@
 ---
- - hosts: all
-   become: yes
-   tasks:
-    - name: install tree
-      apt:
-         - name: tree
-           state: present
+   - name: create a folder 
+     file:
+        path: /home/akhil/practice/test
+        state: touch
+
+   - name: copy the file to source
+     copy : 
+       src: dynamic.j2
+       dest: /var/www/html/index.html    
 
