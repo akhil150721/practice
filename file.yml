@@ -1,5 +1,5 @@
 --- 
-- host: ubuntuserver
+- hosts: ubuntuserver
   become: yes
   tasks: 
      - name: create a folder 
