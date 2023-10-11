@@ -1,0 +1,6 @@
+--- 
+- name: download a file
+  get_url: 
+   url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.15/bin/apache-tomcat-8.0.15-windows-i64.zip
+   dest: /home/ubuntu/test
+   force_basic_auth: yes
