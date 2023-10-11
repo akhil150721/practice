@@ -1,7 +1,7 @@
 ---
    - name: create a folder 
      file:
-        path: /home/akhil/practice/test
+        path: /home/ubuntu/test
         state: touch
 
    - name: copy the file to source
